@@ -1,0 +1,2 @@
+spawn-at-startup "noctalia"
+spawn-at-startup "pipewire"

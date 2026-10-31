@@ -1,0 +1,189 @@
+[bar.default]
+center = [ "clock", "media" ]
+end = [
+    "tray",
+    "notifications",
+    "clipboard",
+    "keyboard_layout",
+    "network",
+    "volume",
+    "brightness",
+    "status",
+    "widget",
+    "session"
+]
+start = [ "workspaces" ]
+
+[brightness]
+enable_ddcutil = true
+
+[control_center]
+hidden_tabs = [ "power", "network", "bluetooth" ]
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = false
+    timeout = 660.0
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-1", "lockscreen-widget-0000000000000001" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 960.0
+    cy = 540.0
+    output = "DP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+
+[plugin_settings."aristides/udiskie"]
+file_manager_cmd = "dolphin"
+
+[plugin_settings."gluow3377/xbps-notify"]
+check_interval = 10
+elevation = "doas"
+
+[plugins]
+enabled = [ "gluow3377/xbps-notify", "aristides/udiskie" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/gluow3377/noctalia-xbps-notify"
+    name = "xbps-notify"
+
+[shell]
+avatar_path = "/home/gluow/Изображения/1.png"
+external_ip_enabled = true
+font_family = "JetBrainsMono NFM"
+password_style = "random"
+polkit_agent = true
+screen_time_enabled = true
+
+    [shell.launcher]
+    app_grid = true
+    default_view = "pinned"
+    pinned = [
+        "firefox",
+        "google-chrome",
+        "md.obsidian.Obsidian",
+        "org.kde.dolphin",
+        "org.keepassxc.KeePassXC",
+        "org.telegram.desktop",
+        "Throne"
+    ]
+
+[theme]
+builtin = "Gruvbox"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "qt" ]
+
+[wallpaper]
+directory = "/home/gluow/Изображения"
+
+    [wallpaper.default]
+    path = "/home/gluow/Изображения/Cat_at_Play.png"
+
+    [wallpaper.last]
+    path = "/home/gluow/Изображения/Cat_at_Play.png"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/gluow/Изображения/Cat_at_Play.png"
+
+[widget.media]
+hide_when_no_media = true
+
+[widget.status]
+hide_when_empty = true
+type = "aristides/udiskie:status"
+
+[widget.widget]
+hide_when_updated = true
+type = "gluow3377/xbps-notify:widget"
