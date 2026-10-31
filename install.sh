@@ -71,7 +71,7 @@ doas xbps-install -Suy \
 
 xdg-user-dirs-update
 
-cp -r bat cava fastfetch fish kitty lazygit niri noctalia nvim ranger zellij /home/gluow/.config/
+cp -r bat cava fastfetch fish kitty lazygit niri noctalia nvim ranger zellij btop /home/gluow/.config/
 cp images/* /home/gluow/Изображения/
 cp lavat.sh /home/gluow/
 
