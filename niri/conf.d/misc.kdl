@@ -1,0 +1,5 @@
+hotkey-overlay {
+    skip-at-startup
+}
+
+screenshot-path "~/Изображения/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

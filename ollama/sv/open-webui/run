@@ -1,0 +1,8 @@
+#!/bin/sh
+exec 2>&1
+export HOME=/var/lib/open-webui
+export DATA_DIR=/var/lib/open-webui
+export STATIC_DIR=/var/lib/open-webui/static
+export OLLAMA_BASE_URL=http://127.0.0.1:11434
+cd /var/lib/open-webui || exit 1
+exec chpst -u open-webui /opt/open-webui/venv/bin/open-webui serve --host 0.0.0.0 --port 8080
